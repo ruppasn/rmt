@@ -26,7 +26,7 @@ const columns = [
       },
   ];
 
-const RecipeTable = () => {
+const RecipeTable = ({params}) => {
 
     const [data, setData] = useState([]);
     const [selectedRowKeys, setSelectedRowKeys] = useState([]);
@@ -35,7 +35,7 @@ const RecipeTable = () => {
     let url = 'recipes/?page=1';
 
     useEffect(() => {
-        apiClient.get(url).then(({data}) => {
+        apiClient.get(url, { params }).then(({data}) => {
             console.log(data)
             setData(data.results || [])
         })
