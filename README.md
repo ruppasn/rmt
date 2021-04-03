@@ -1,4 +1,3 @@
-# Recipe(s) Management Tool (RMT)
 
 ### React based application
 
